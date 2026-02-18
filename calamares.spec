@@ -19,6 +19,8 @@ BuildRequires:  pkgconfig
 BuildRequires:  make
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
+BuildRequires:  polkit-qt6-1-devel
+
 BuildRequires:  cmake(Qt6Concurrent)
 BuildRequires:  cmake(Qt6Core)
 BuildRequires:  cmake(Qt6DBus)

@@ -99,21 +99,26 @@ install -D -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/calamares/settings.conf
 mkdir -p %{buildroot}%{_datadir}/calamares/branding/default
 install -D -m 644 %{SOURCE2} %{buildroot}%{_datadir}/calamares/branding/default/branding.desc
 
-
 %files
 %{_bindir}/calamares
 %{_datadir}/calamares
 %{_datadir}/applications/calamares.desktop
-# Calamares installed files we missed
+# Catch all libraries and plugins
 %{_libdir}/calamares/
 %{_libdir}/libcalamares.so*
+%{_libdir}/libcalamaresui.so*
+# Catch all icons and other data
 %{_datadir}/icons/hicolor/*/apps/calamares.svg
 %{_mandir}/man8/calamares.8*
 %{_datadir}/polkit-1/actions/com.github.calamares.calamares.policy
+# Catch all localizations
+%{_datadir}/locale/*/LC_MESSAGES/calamares*.mo
 # Settings
 %config(noreplace) %{_sysconfdir}/calamares/settings.conf
+# Exclude development headers and cmake files (or include them in -devel if needed, but for now we exclude strictly)
 %exclude %{_includedir}
-# We can include branding here or above
+%exclude %{_libdir}/cmake
+# Directories
 %dir %{_sysconfdir}/calamares/
 %dir %{_datadir}/calamares/branding
 

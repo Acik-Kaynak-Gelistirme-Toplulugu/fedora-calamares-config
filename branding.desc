@@ -1,0 +1,34 @@
+---
+componentName:  default
+
+welcomeStyleCalamares:   true
+
+strings:
+    productName:         "Custom Fedora"
+    shortProductName:    "Fedora"
+    version:             "43 (Rawhide)"
+    shortVersion:        "43"
+    versionedName:       "Custom Fedora 43"
+    shortVersionedName:  "Fedora 43"
+    bootloaderEntryName: "Fedora"
+    productUrl:          "https://fedoraproject.org/"
+    supportUrl:          "https://fedoraproject.org/help"
+    knownIssuesUrl:      "https://fedoraproject.org/wiki/Common_F43_bugs"
+    releaseNotesUrl:     "https://fedoraproject.org/wiki/Releases/43/Release_Notes"
+    donateUrl:           "https://fedoraproject.org/wiki/Contribute"
+
+images:
+    productLogo:         "squid.png"
+    productIcon:         "squid.png"
+    productWelcome:      "welcome.png"
+    # productWallpaper:  "wallpaper.png"
+
+style:
+   sidebarBackground:    "#292F34"
+   sidebarText:          "#FFFFFF"
+   sidebarTextSelect:    "#292F34"
+   sidebarTextHighlight: "#5294E2"
+
+slideshow:               "show.qml"
+    
+slideshowAPI: 2
